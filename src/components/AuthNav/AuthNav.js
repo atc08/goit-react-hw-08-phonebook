@@ -5,7 +5,7 @@ import s from './AuthNav.module.scss';
 const AuthNav = () => (
   <div>
     <NavLink
-      to="/register"
+      to="/signup"
       exact
       className={s.link}
       activeClassName={s.activeLink}

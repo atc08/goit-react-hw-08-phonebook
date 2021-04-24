@@ -9,7 +9,7 @@ const UserMenu = ({ /*avatar,*/ name, onLogout }) => (
     {/* <img src={avatar} alt="" width="32" className={s.avatar} /> */}
     <span className={s.name}>Welcome, {name}</span>
     <button type="button" onClick={onLogout}>
-      Logout
+      LogOut
     </button>
   </div>
 );

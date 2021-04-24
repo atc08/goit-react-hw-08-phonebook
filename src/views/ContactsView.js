@@ -11,6 +11,7 @@ class ContactsView extends Component {
   componentDidMount() {
     this.props.fetchContacts();
   }
+
   render() {
     return (
       <Container>

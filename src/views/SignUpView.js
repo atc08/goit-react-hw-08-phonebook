@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { signUp } from '../redux/auth';
 import s from './ViewsStyles.module.scss';
 
-class RegisterView extends Component {
+class SignUpView extends Component {
   state = {
     name: '',
     email: '',
@@ -17,7 +17,7 @@ class RegisterView extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onRegister(this.state);
+    this.props.onSignUp(this.state);
 
     this.setState({ name: '', email: '', password: '' });
   };
@@ -72,7 +72,7 @@ class RegisterView extends Component {
 }
 
 const mapDispatchToProps = {
-  onRegister: signUp,
+  onSignUp: signUp,
 };
 
-export default connect(null, mapDispatchToProps)(RegisterView);
+export default connect(null, mapDispatchToProps)(SignUpView);
