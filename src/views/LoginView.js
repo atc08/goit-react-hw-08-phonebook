@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { authOperations } from '../redux/auth';
-import s from './ViewsStyles.scss';
+import { logIn } from '../redux/auth';
+import s from './ViewsStyles.module.scss';
 
 class LoginView extends Component {
-  // state = {
-  //   email: '',
-  //   password: '',
-  // };
+  state = {
+    email: '',
+    password: '',
+  };
 
-  // handleChange = ({ target: { name, value } }) => {
-  //   this.setState({ [name]: value });
-  // };
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
+  };
 
-  // handleSubmit = e => {
-  //   e.preventDefault();
+  handleSubmit = e => {
+    e.preventDefault();
 
-  //   this.props.onLogin(this.state);
+    this.props.onLogIn(this.state);
 
-  //   this.setState({ name: '', email: '', password: '' });
-  // };
+    this.setState({ name: '', email: '', password: '' });
+  };
 
   render() {
     const { email, password } = this.state;
@@ -61,7 +61,7 @@ class LoginView extends Component {
 }
 
 const mapDispatchToProps = {
-  // onLogin: authOperations.logIn,
+  onLogIn: logIn,
 };
 
 export default connect(null, mapDispatchToProps)(LoginView);

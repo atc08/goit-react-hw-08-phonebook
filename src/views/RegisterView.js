@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { register } from '../redux/auth';
-import s from './ViewsStyles.scss';
+import { signUp } from '../redux/auth';
+import s from './ViewsStyles.module.scss';
 
 class RegisterView extends Component {
   state = {
@@ -10,9 +10,9 @@ class RegisterView extends Component {
     password: '',
   };
 
-  // handleChange = ({ target: { name, value } }) => {
-  //   this.setState({ [name]: value });
-  // };
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -72,7 +72,7 @@ class RegisterView extends Component {
 }
 
 const mapDispatchToProps = {
-  onRegister: register,
+  onRegister: signUp,
 };
 
 export default connect(null, mapDispatchToProps)(RegisterView);

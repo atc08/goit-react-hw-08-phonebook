@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import Navigation from '../Navigation';
 import UserMenu from '../UserMenu';
 import AuthNav from '../AuthNav';
-// import { authSelectors } from '../redux/auth';
-import s from './AppBar.scss';
+import { getIsAuthenticated } from '../../redux/auth';
+import s from './AppBar.module.scss';
 
 const AppBar = ({ isAuthenticated }) => (
   <header className={s.header}>
@@ -14,7 +14,7 @@ const AppBar = ({ isAuthenticated }) => (
 );
 
 const mapStateToProps = state => ({
-  // isAuthenticated: authSelectors.getIsAuthenticated(state),
+  isAuthenticated: getIsAuthenticated(state),
 });
 
 export default connect(mapStateToProps)(AppBar);

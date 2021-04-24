@@ -1,8 +1,8 @@
 import { createAction } from '@reduxjs/toolkit';
 
-const registerRequest = createAction('auth/registerRequest');
-const registerSuccess = createAction('auth/registerSuccess');
-const registerError = createAction('auth/registerError');
+const signUpRequest = createAction('auth/registerRequest');
+const signUpSuccess = createAction('auth/registerSuccess');
+const signUpError = createAction('auth/registerError');
 
 const logInRequest = createAction('auth/loginRequest');
 const logInSuccess = createAction('auth/loginSuccess');
@@ -12,21 +12,22 @@ const logOutRequest = createAction('auth/logoutRequest');
 const logOutSuccess = createAction('auth/logoutSuccess');
 const logOutError = createAction('auth/logoutError');
 
-const geyCurrentUserRequest = createAction('auth/getCurrentUserRequest');
-const geyCurrentUserSuccess = createAction('auth/getCurrentUserSuccess');
-const geyCurrentUserError = createAction('auth/getCurrentUserError');
+const getCurrentUserRequest = createAction('auth/getCurrentUserRequest');
+const getCurrentUserSuccess = createAction('auth/getCurrentUserSuccess');
+const getCurrentUserError = createAction('auth/getCurrentUserError');
 
+// eslint-disable-next-line
 export {
-  registerRequest,
-  registerSuccess,
-  registerError,
+  signUpRequest,
+  signUpSuccess,
+  signUpError,
   logInRequest,
   logInSuccess,
   logInError,
   logOutRequest,
   logOutSuccess,
   logOutError,
-  geyCurrentUserRequest,
-  geyCurrentUserSuccess,
-  geyCurrentUserError,
+  getCurrentUserRequest,
+  getCurrentUserSuccess,
+  getCurrentUserError,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactListItem from './ContactListItem';
-import s from './ContactList.module.css';
+import s from './ContactList.module.scss';
 import PropTypes from 'prop-types';
 
 const ContactList = ({ contacts, ondeleteContact }) => {

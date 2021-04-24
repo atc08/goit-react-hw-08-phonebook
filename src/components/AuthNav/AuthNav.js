@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import s from './AuthNav.scss';
+import s from './AuthNav.module.scss';
 
 const AuthNav = () => (
   <div>
@@ -10,7 +10,7 @@ const AuthNav = () => (
       className={s.link}
       activeClassName={s.activeLink}
     >
-      Registration
+      SignUp
     </NavLink>
     <NavLink
       to="/login"

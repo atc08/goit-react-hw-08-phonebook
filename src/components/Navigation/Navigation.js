@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import s from './Navigation.scss';
+import s from './Navigation.module.scss';
 
 const Navigation = () => (
   <nav>
@@ -14,7 +14,7 @@ const Navigation = () => (
       className={s.link}
       activeClassName={s.activeLink}
     >
-      Notifications
+      Phonebook
     </NavLink>
   </nav>
 );

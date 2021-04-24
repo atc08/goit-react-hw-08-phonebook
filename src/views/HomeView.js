@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './ViewsStyles.scss';
+import s from './ViewsStyles.module.scss';
 
 const HomeView = () => (
   <div className={s.container}>

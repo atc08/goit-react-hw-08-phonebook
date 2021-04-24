@@ -6,12 +6,12 @@ import HomeView from './views/HomeView';
 import RegisterView from './views/RegisterView';
 import LoginView from './views/LoginView';
 import ContactsView from './views/ContactsView';
-// import { authOperations } from './redux/auth';
+import { getCurrentUser } from './redux/auth';
 import { connect } from 'react-redux';
 
 class App extends Component {
   componentDidMount() {
-    this.props.onGetCurretnUser();
+    this.props.onGetCurrentUser();
   }
 
   render() {
@@ -31,7 +31,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = {
-  // onGetCurretnUser: authOperations.getCurrentUser,
+  onGetCurrentUser: getCurrentUser,
 };
 
 export default connect(null, mapDispatchToProps)(App);
